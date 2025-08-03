@@ -2,26 +2,73 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body { font-family: Arial; padding: 40px; background: #fff0f5; max-width: 720px; margin: auto; line-height: 1.6 }
+    h1 { color: #cc0066; }
+    .btn { background: #cc0066; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+    input { padding: 10px; font-size: 16px; width: 200px; margin-right: 10px; }
+    .hidden { display: none; margin-top: 30px; }
+    iframe { width: 100%; height: 500px; border: 1px solid #ccc; margin-top: 20px; }
+    ul { padding-left: 20px; }
+    hr { margin-top: 60px; }
+  </style>
 </head>
-<body style="font-family: Arial; padding: 30px; max-width: 600px; margin: auto; line-height: 1.6">
-  <h1>📘 Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</h1>
-  <p><strong>Giá:</strong> <span style="color: red; font-size: 20px;">189.000 VNĐ</span></p>
+<body>
+
+  <h1>📖 Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</h1>
+
+  <p><strong>Giá bán:</strong> <span style="color:red;">189.000 VNĐ</span></p>
 
   <h3>📖 Đọc thử 20% đầu sách</h3>
-  <iframe src="LINK_GOOGLE_DRIVE_DOCS_XEM_TRƯỚC" width="100%" height="500px"></iframe>
+  <iframe src="https://docs.google.com/document/d/1D238f2gK9ANJWAMYVLmBzH9vA0qoxSL-/preview"></iframe>
 
-  <h3>💳 Mua sách đọc toàn bộ</h3>
-  <p>Chuyển khoản vào tài khoản dưới đây:</p>
+  <h3>💳 Cách mua sách</h3>
   <ul>
     <li><strong>Ngân hàng:</strong> VietinBank</li>
     <li><strong>Số tài khoản:</strong> 152872581451</li>
     <li><strong>Tên tài khoản:</strong> Nguyễn Thị Lan</li>
-    <li><strong>Nội dung:</strong> Mua sách [Tên sách]</li>
+    <li><strong>Nội dung chuyển khoản:</strong> Mua sách tư duy mới</li>
   </ul>
-  <p>Sau khi chuyển khoản, vui lòng nhắn tin trực tiếp để được cấp quyền truy cập toàn bộ sách.</p>
 
-  <p><em>Copyright © Queen Lilly Nguyễn | Tất cả bản quyền thuộc về tác giả</em></p>
+  <p><strong>👉 Sau khi chuyển khoản, bạn vui lòng điền thông tin để nhận mã mở khoá sách:</strong></p>
+  <p>
+    <a class="btn" href="https://forms.gle/6vU5YqUdRCXnHS3E6" target="_blank">📥 Gửi thông tin tại đây</a>
+  </p>
+
+  <h3>🔐 Nhập mã truy cập:</h3>
+  <input type="text" id="codeInput" placeholder="Mã truy cập cá nhân">
+  <button class="btn" onclick="unlockBook()">Mở khoá</button>
+
+  <div id="fullBook" class="hidden">
+    <h2>📘 Link đọc toàn bộ sách:</h2>
+    <p>
+      👉 <a href="https://drive.google.com/file/d/1ABCXYZabcDEFghiJklMNopQRstuVWXY/view" target="_blank">
+        Bấm vào đây để xem sách đầy đủ (PDF)
+      </a>
+    </p>
+  </div>
+
+  <script>
+    async function unlockBook() {
+      const userCode = document.getElementById('codeInput').value.trim();
+      const response = await fetch('codes.json');
+      const codes = await response.json();
+
+      if (codes.includes(userCode)) {
+        document.getElementById('fullBook').style.display = 'block';
+      } else {
+        alert('Sai mã truy cập. Vui lòng kiểm tra lại hoặc liên hệ người bán.');
+      }
+    }
+  </script>
+
+  <hr>
+  <p style="font-size: 14px; color: #555; text-align: center;">
+    © 2025 Queen Lilly Nguyễn. Mọi nội dung, ý tưởng và sản phẩm đều thuộc bản quyền tác giả.<br>
+    Nghiêm cấm sao chép, phát tán hoặc khai thác dưới bất kỳ hình thức nào nếu không có sự đồng ý bằng văn bản.
+  </p>
+
 </body>
 </html>
