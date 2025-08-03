@@ -28,13 +28,17 @@
       border-radius: 4px;
       margin-bottom: 10px;
     }
+    #fullbook {
+      display: none;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
 
   <h2>📖 Sách: <span style="color: #222;">Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</span></h2>
 
-  <p>📘 <a href="https://docs.google.com/document/d/1D238f2gK9ANJWAMYVLmBzH9vA0qoxSL-/edit?usp=drivesdk&ouid=106107475625868497919&rtpof=true&sd=true" target="_blank">Đọc thử 20% đầu sách tại đây</a></p>
+  <p>📘 <a href="https://docs.google.com/document/d/1D238f2gK9ANJWAMYVLmBzH9vA0qoxSL-/edit?usp=drivesdk" target="_blank">Đọc thử 20% đầu sách tại đây</a></p>
 
   <p>Sau khi chuyển khoản <strong style="font-size: 17px;">189.000đ</strong> tới STK VietinBank:<br>
   <strong style="font-size: 17px; color: #000;">152872581451 – Nguyễn Thị Lan</strong></p>
@@ -51,13 +55,28 @@
   <p>Sau đó, bạn sẽ nhận được mã truy cập để mở khóa toàn bộ sách.</p>
 
   <p>🔒 <strong>Nhập mã truy cập để đọc tiếp sách:</strong></p>
-  <input type="text" placeholder="Nhập mã truy cập">
-  <button>Mở khóa sách</button>
+  <input type="text" id="codeInput" placeholder="Nhập mã truy cập">
+  <button onclick="unlockBook()">Mở khóa sách</button>
+
+  <div id="fullbook">
+    ✅ Mã đúng. 👉 <a href="https://docs.google.com/document/d/1fyWDkIpTwsiIpMlhgqI2sncwqn4bshwl/edit?usp=drivesdk" target="_blank">Bấm vào đây để đọc toàn bộ sách</a>
+  </div>
 
   <p style="margin-top: 40px;">
     © 2025 <strong>Queen Lilly Nguyễn</strong> – Tác giả & Sáng lập hệ tư duy Soulchanica.<br>
     Mọi quyền được bảo hộ. Nghiêm cấm sao chép, chia sẻ khi chưa có sự cho phép bằng văn bản.
   </p>
+
+  <script>
+    function unlockBook() {
+      var code = document.getElementById("codeInput").value;
+      if (code === "PHONGNGUYETTHE98") {
+        document.getElementById("fullbook").style.display = "block";
+      } else {
+        alert("Sai mã truy cập. Vui lòng kiểm tra lại!");
+      }
+    }
+  </script>
 
 </body>
 </html>
