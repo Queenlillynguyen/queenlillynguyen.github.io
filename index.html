@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Sách: Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; }
+    .button { padding: 6px 12px; background-color: #ddd; border: none; border-radius: 5px; cursor: pointer; }
+    input { padding: 6px; border: 1px solid #ccc; border-radius: 5px; }
+  </style>
+</head>
+<body>
 
+  <h2>Sách: <b>Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</b></h2>
+
+  <p>📖 <a href="https://docs.google.com/document/d/1D238f2gK9ANJWAMYVLmBzH9vA0qoxSL-/edit?usp=drivesdk" target="_blank">Đọc thử 20% đầu sách tại đây</a></p>
+
+  <p>Sau khi chuyển khoản <b>189.000đ</b> tới STK VietinBank:<br>
+  <b>152872581451 – Nguyễn Thị Lan</b>,<br>
+  hãy nhập mã truy cập để đọc tiếp sách:</p>
+
+  <input type="text" id="codeInput" placeholder="Nhập mã truy cập">
+  <button class="button" onclick="unlock()">🔓 Mở khóa sách</button>
+
+  <div id="fullLink" style="display:none; margin-top:20px;">
+    ✅ Truy cập sách đầy đủ tại đây:<br>
+    <a href="https://docs.google.com/document/d/1fyWDkIpTwsiIpMlhgqI2sncwqn4bshwl/edit?usp=drivesdk" target="_blank">👉 Toàn bộ nội dung sách</a>
+  </div>
+
+  <p style="margin-top:50px; font-size: 13px; color: gray;">
+    © 2025 Queen Lilly Nguyễn – Tác giả & Sáng lập hệ tư duy Soulchanica.<br>
+    Mọi quyền được bảo hộ. Nghiêm cấm sao chép, chia sẻ khi chưa có sự cho phép bằng văn bản.
+  </p>
+
+  <script>
+    function unlock() {
+      const code = document.getElementById("codeInput").value.trim();
+      if (code === "PHONGNGUYETTHE98") {
+        document.getElementById("fullLink").style.display = "block";
+      } else {
+        alert("Sai mã truy cập. Vui lòng kiểm tra lại!");
+      }
+    }
+  </script>
+
+</body>
+</html>
