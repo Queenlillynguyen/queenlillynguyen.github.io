@@ -1,60 +1,43 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giải mã Cơ Chế Tâm Lý và Tái Thiết Lập Tư Duy</title>
+  <meta charset="UTF-8" />
+  <title>Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</title>
 </head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px;">
+<body style="font-family: Arial; padding: 20px; max-width: 800px; margin: auto;">
 
-  <h1>📖 GIẢI MÃ CƠ CHẾ TÂM LÝ VÀ TÁI THIẾT LẬP TƯ DUY MỚI</h1>
+  <h2>📖 Sách: Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</h2>
 
-  <p><strong>Tác giả:</strong> Queen Lilly Nguyễn</p>
-  <p><strong>Giá bán:</strong> 189.000 VNĐ</p>
+  <p><a href="https://docs.google.com/document/d/1D238f2gK9ANJWAMYVLmBzH9vA0qoxSL-/edit?usp=drivesdk" target="_blank">📖 Đọc thử 20% đầu sách tại đây</a></p>
 
-  <h2>✨ Đọc thử 20% đầu sách:</h2>
-  <p>
-    👉 <a href="https://docs.google.com/document/d/1D238f2gK9ANJWAMYVLmBzH9vA0qoxSL-/edit?usp=drivesdk" target="_blank">
-      Nhấn vào đây để đọc thử
-    </a>
-  </p>
+  <p>Sau khi chuyển khoản <strong>189.000đ</strong> tới STK VietinBank: <br><strong>152872581451 – Nguyễn Thị Lan</strong></p>
 
-  <h2>💳 Thông tin chuyển khoản:</h2>
-  <ul>
-    <li><strong>Ngân hàng:</strong> VietinBank</li>
-    <li><strong>Số tài khoản:</strong> 152872581451</li>
-    <li><strong>Tên tài khoản:</strong> Nguyễn Thị Lan</li>
-    <li><strong>Nội dung chuyển khoản:</strong> Mua sách giải mã cơ chế + email để nhận mã truy cập</li>
-  </ul>
+  <p style="background: #f2f2f2; padding: 10px;">📩 Ghi nội dung chuyển khoản: <br><strong>Mua sách giải mã cơ chế + email để nhận mã</strong></p>
 
-  <h2>🔓 Nhập mã truy cập để đọc toàn bộ sách:</h2>
-  <form onsubmit="return checkCode()">
-    <input type="text" id="accessCode" placeholder="Nhập mã truy cập..." required>
-    <button type="submit">Mở khóa</button>
-  </form>
+  <p>Sau đó bạn sẽ nhận được mã truy cập để mở khoá toàn bộ sách.</p>
 
-  <div id="fullContent" style="display:none; margin-top: 20px;">
-    <h2>📘 Đọc toàn bộ sách tại đây:</h2>
-    <p>
-      👉 <a href="https://docs.google.com/document/d/1fyWDkIpTwsiIpMlhgqI2sncwqn4bshwl/edit?usp=drivesdk" target="_blank">
-        Nhấn vào đây để đọc toàn bộ sách
-      </a>
-    </p>
+  <h3>🔓 Nhập mã truy cập để đọc tiếp sách:</h3>
+  <input id="accessCode" type="text" placeholder="Nhập mã truy cập..." />
+  <button onclick="unlock()">Mở khóa</button>
+
+  <div id="bookContent" style="display: none; margin-top: 20px;">
+    <h3>📘 Toàn bộ sách:</h3>
+    <p><a href="https://docs.google.com/document/d/1fyWDkIpTwsiIpMlhgqI2sncwqn4bshwl/edit?usp=drivesdk" target="_blank">👉 Bấm vào đây để đọc toàn bộ sách</a></p>
   </div>
 
+  <p style="margin-top: 40px;">© 2025 <strong>Queen Lilly Nguyễn</strong> – Tác giả & Sáng lập hệ tư duy Soulchanica.<br>
+  Mọi quyền được bảo hộ. Nghiêm cấm sao chép, chia sẻ khi chưa có sự cho phép.</p>
+
   <script>
-    function checkCode() {
-      var code = document.getElementById("accessCode").value.trim();
-      if (code === "PHONGNGUYETTHE98") {
-        document.getElementById("fullContent").style.display = "block";
+    function unlock() {
+      const code = document.getElementById('accessCode').value;
+      if (code.trim() === 'PHONGNGUYETTHE98') {
+        document.getElementById('bookContent').style.display = 'block';
       } else {
-        alert("Mã không đúng. Vui lòng kiểm tra lại.");
+        alert('Sai mã truy cập. Vui lòng kiểm tra lại.');
       }
-      return false;
     }
   </script>
 
-  <hr>
-  <p><strong>📜 Bản quyền:</strong> Tác phẩm đã được đăng ký bản quyền tại Việt Nam và quốc tế. Mọi hành vi sao chép, trích dẫn hoặc phát hành lại mà không được phép đều vi phạm luật bản quyền.</p>
 </body>
 </html>
