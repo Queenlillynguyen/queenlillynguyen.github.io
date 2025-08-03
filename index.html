@@ -2,73 +2,35 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <title>Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style>
-    body { font-family: Arial; padding: 40px; background: #fff0f5; max-width: 720px; margin: auto; line-height: 1.6 }
-    h1 { color: #cc0066; }
-    .btn { background: #cc0066; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
-    input { padding: 10px; font-size: 16px; width: 200px; margin-right: 10px; }
-    .hidden { display: none; margin-top: 30px; }
-    iframe { width: 100%; height: 500px; border: 1px solid #ccc; margin-top: 20px; }
-    ul { padding-left: 20px; }
-    hr { margin-top: 60px; }
-  </style>
+  <title>Sách: Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</title>
 </head>
 <body>
+  <h2>Sách: <strong>Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</strong></h2>
+  <p>👉 <a href="link_toi_phan_doc_thu.html">Đọc thử 20% đầu sách tại đây</a></p>
 
-  <h1>📖 Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</h1>
+  <p>Sau khi chuyển khoản <strong>189.000đ</strong> tới STK VietinBank: <br>
+  <strong>152872581451 – Nguyễn Thị Lan</strong>, <br>
+  hãy nhập mã truy cập để đọc tiếp sách:</p>
 
-  <p><strong>Giá bán:</strong> <span style="color:red;">189.000 VNĐ</span></p>
-
-  <h3>📖 Đọc thử 20% đầu sách</h3>
-  <iframe src="https://docs.google.com/document/d/1D238f2gK9ANJWAMYVLmBzH9vA0qoxSL-/preview"></iframe>
-
-  <h3>💳 Cách mua sách</h3>
-  <ul>
-    <li><strong>Ngân hàng:</strong> VietinBank</li>
-    <li><strong>Số tài khoản:</strong> 152872581451</li>
-    <li><strong>Tên tài khoản:</strong> Nguyễn Thị Lan</li>
-    <li><strong>Nội dung chuyển khoản:</strong> Mua sách tư duy mới</li>
-  </ul>
-
-  <p><strong>👉 Sau khi chuyển khoản, bạn vui lòng điền thông tin để nhận mã mở khoá sách:</strong></p>
-  <p>
-    <a class="btn" href="https://forms.gle/6vU5YqUdRCXnHS3E6" target="_blank">📥 Gửi thông tin tại đây</a>
-  </p>
-
-  <h3>🔐 Nhập mã truy cập:</h3>
-  <input type="text" id="codeInput" placeholder="Mã truy cập cá nhân">
-  <button class="btn" onclick="unlockBook()">Mở khoá</button>
-
-  <div id="fullBook" class="hidden">
-    <h2>📘 Link đọc toàn bộ sách:</h2>
-    <p>
-      👉 <a href="https://drive.google.com/file/d/1ABCXYZabcDEFghiJklMNopQRstuVWXY/view" target="_blank">
-        Bấm vào đây để xem sách đầy đủ (PDF)
-      </a>
-    </p>
-  </div>
+  <input type="text" id="codeInput" placeholder="Nhập mã truy cập">
+  <button onclick="checkCode()">Mở khóa sách</button>
 
   <script>
-    async function unlockBook() {
-      const userCode = document.getElementById('codeInput').value.trim();
-      const response = await fetch('codes.json');
-      const codes = await response.json();
-
-      if (codes.includes(userCode)) {
-        document.getElementById('fullBook').style.display = 'block';
+    function checkCode() {
+      const input = document.getElementById("codeInput").value.trim();
+      const validCodes = ["PHONGNGUYETTHE98"];
+      if (validCodes.includes(input)) {
+        window.location.href = "full.html";
       } else {
-        alert('Sai mã truy cập. Vui lòng kiểm tra lại hoặc liên hệ người bán.');
+        alert("Mã truy cập không đúng. Vui lòng kiểm tra lại.");
       }
     }
   </script>
 
   <hr>
-  <p style="font-size: 14px; color: #555; text-align: center;">
-    © 2025 Queen Lilly Nguyễn. Mọi nội dung, ý tưởng và sản phẩm đều thuộc bản quyền tác giả.<br>
-    Nghiêm cấm sao chép, phát tán hoặc khai thác dưới bất kỳ hình thức nào nếu không có sự đồng ý bằng văn bản.
+  <p style="font-size: 13px; color: gray;">
+    © 2025 Queen Lilly Nguyễn – Tác giả & Sáng lập hệ tư duy Soulchanica. <br>
+    Mọi quyền được bảo hộ. Nghiêm cấm sao chép, chia sẻ khi chưa có sự cho phép bằng văn bản.
   </p>
-
 </body>
 </html>
