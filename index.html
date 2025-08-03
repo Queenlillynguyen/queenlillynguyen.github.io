@@ -1,1 +1,76 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .button {
+      display: inline-block;
+      background-color: #28a745;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin: 12px 0;
+      font-weight: bold;
+    }
+    input {
+      padding: 6px;
+      font-size: 15px;
+    }
+    button {
+      padding: 6px 12px;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h2>📘 Sách: <span style="color: #222;">Giải mã Cơ Chế Tâm Lý và Tái Thiết Tư Duy Mới</span></h2>
+
+  <p><a href="https://docs.google.com/document/d/1D238f2gK9ANJWAMYVLmBzH9vA0qoxSL-/edit?usp=drivesdk" target="_blank">📖 Đọc thử 20% đầu sách tại đây</a></p>
+
+  <p>
+    Sau khi chuyển khoản <strong style="font-size: 17px; color: #000;">189.000đ</strong> tới STK VietinBank:  
+    <strong style="font-size: 17px; color: #000;">152872581451 – Nguyễn Thị Lan</strong>,<br>
+    vui lòng ghi nội dung chuyển khoản:
+  </p>
+
+  <p style="background-color: #f2f2f2; padding: 8px;">
+    <strong>Mua sách giải mã cơ chế – ghi rõ email để nhận mã truy cập</strong>
+  </p>
+
+  <p>
+    Sau khi xác nhận chuyển khoản, tôi sẽ gửi <strong>mã truy cập qua email</strong> để bạn mở khoá toàn bộ sách.<br>
+    🔓 Nhập mã đó vào đây để đọc tiếp:
+  </p>
+
+  <input type="text" id="codeInput" placeholder="Nhập mã truy cập">
+  <button onclick="unlockBook()">Mở khóa sách</button>
+
+  <div id="fullBook" style="display:none; margin-top: 20px;">
+    <iframe src="https://docs.google.com/document/d/1fyWDkIpTwsiIpMlhgqI2sncwqn4bshwl/preview" width="100%" height="800px" style="border: none;"></iframe>
+  </div>
+
+  <p style="margin-top: 40px;">
+    © 2025 <strong>Queen Lilly Nguyễn</strong> – Tác giả & Sáng lập hệ tư duy Soulchanica.<br>
+    Mọi quyền được bảo hộ. Nghiêm cấm sao chép, chia sẻ khi chưa có sự cho phép bằng văn bản.
+  </p>
+
+  <script>
+    function unlockBook() {
+      const code = document.getElementById('codeInput').value.trim();
+      if (code === 'PHONGNGUYETTHE98') {
+        document.getElementById('fullBook').style.display = 'block';
+      } else {
+        alert('Mã truy cập không đúng. Vui lòng kiểm tra lại!');
+      }
+    }
+  </script>
+</body>
+</html>
